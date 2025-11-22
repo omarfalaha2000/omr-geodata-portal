@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMR | Omar Falaha Surveying Engineer - Lebanon GeoData Portal</title>
+    
+    <meta name="google-site-verification" content="OMR-PASTE-YOUR-UNIQUE-GSC-CODE-HERE" />
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Professional Font (Poppins for a special, modern look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS variables for a Pastel Color Palette */
+        :root {
+            --color-primary-light: #f0f4f8; /* Soft background, light blue-gray */
+            --color-secondary-light: #e6eef5; /* Slightly darker light background */
+            --color-pastel-accent: #a8d0db; /* Soft blue/teal accent */
+            --color-pastel-red: #ff9aa2; /* Muted rose/red accent */
+            --color-text-dark: #3a4750; /* Deep charcoal for text */
+            --color-text-muted: #6b7a8f; /* Muted gray for secondary text */
+            --color-text-light: #ffffff; /* For text on darker backgrounds */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* Applied Poppins */
+            background-color: var(--color-primary-light); /* Soft background */
+            color: var(--color-text-dark);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--color-secondary-light); /* Lighter header background */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Navigation Links */
+        nav a {
+            color: var(--color-text-dark);
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--color-pastel-red); /* Pastel red on hover */
+        }
+
+        /* Call to Action Button in Header */
+        header .cta-button {
+            background-color: var(--color-pastel-red);
+            color: var(--color-text-light);
+            transition: background-color 0.3s ease;
+        }
+        header .cta-button:hover {
+            background-color: #e07b85; /* Slightly darker pastel red on hover */
+        }
+
+        /* Hero Section with Pastel-Inspired Background */
+        #hero-banner {
+            background-image: url('https://placehold.co/1920x800/e6eef5/a8d0db?text=OMR+Precision+Surveying+%7C+Lebanon+Geodata'); /* Light background with soft blue accent */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            isolation: isolate;
+        }
+        #hero-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.4); /* Soft, light overlay */
+            z-index: -1;
+        }
+        #hero-banner h1, #hero-banner p {
+            color: var(--color-text-dark); /* Darker text for contrast on light background */
+            text-shadow: none; /* No shadow needed on light background */
+        }
+        #hero-banner .hero-cta {
+            background-color: var(--color-pastel-red);
+            box-shadow: 0 0 10px rgba(255, 154, 162, 0.5); /* Soft red glow */
+            transition: all 0.3s ease;
+            color: var(--color-text-light); /* Ensure text is readable */
+        }
+        #hero-banner .hero-cta:hover {
+            background-color: #e07b85;
+            box-shadow: 0 0 15px rgba(255, 154, 162, 0.7);
+            transform: scale(1.05);
+        }
+
+        /* Feature Blocks */
+        .feature-block {
+            border-color: #dbe4ee;
+            background-color: #ffffff; /* Clean white background */
+            transition: all 0.3s ease;
+        }
+        .feature-block:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: var(--color-pastel-accent); /* Soft blue border on hover */
+        }
+        .feature-block i {
+            color: var(--color-pastel-accent); /* Soft blue icon */
+        }
+        .feature-block h3 {
+            color: var(--color-text-dark);
+        }
+        .feature-block p {
+            color: var(--color-text-muted);
+        }
+        
+        /* Catalog Section */
+        #catalog {
+            background-color: var(--color-primary-light); /* Consistent light background */
+        }
+        #catalog h2 {
+            color: var(--color-text-dark);
+        }
+        #catalog .category-title {
+            color: var(--color-pastel-accent); /* Soft blue category title */
+            border-bottom-color: var(--color-pastel-accent);
+        }
+        .product-item {
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .product-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .product-item span.font-semibold {
+            color: var(--color-text-dark);
+        }
+        .product-item span.text-sm {
+            color: var(--color-text-muted);
+        }
+        #catalog button {
+            background-color: var(--color-secondary-light);
+            color: var(--color-text-dark);
+            transition: all 0.3s ease;
+        }
+        #catalog button:hover {
+            background-color: #d4e0eb; /* Slightly darker light on hover */
+        }
+
+        /* Assurance Section */
+        #assurance {
+             background-color: var(--color-secondary-light); /* Distinct light background */
+        }
+        #assurance h2 {
+            color: var(--color-text-dark);
+        }
+        #assurance ul li i {
+            color: var(--color-pastel-accent);
+        }
+        #assurance h4 {
+            color: var(--color-text-dark);
+        }
+        #assurance .card {
+             background-color: #ffffff;
+        }
+        #assurance .card img {
+            border: 1px solid #e0e0e0; /* Subtle border for images */
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-text-dark); /* Dark footer for contrast */
+            color: var(--color-secondary-light);
+        }
+        footer a {
+            color: var(--color-secondary-light);
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: var(--color-pastel-red);
+        }
+
+        /* Modal Specific Styles */
+        #product-modal #modal-content {
+            background-color: #ffffff;
+        }
+        #product-modal #modal-title {
+            color: var(--color-text-dark);
+        }
+        #product-modal .space-y-3 p strong {
+            color: var(--color-text-dark);
+        }
+        #product-modal #modal-price {
+            color: var(--color-pastel-red);
